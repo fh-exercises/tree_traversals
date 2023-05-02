@@ -43,8 +43,6 @@ def print_postorder(root):
         # now print the data of node
         print(root.val),
 
-
-# Driver code
 if __name__ == "__main__":
     root = Node(25)
     root.left = Node(15)
@@ -62,9 +60,41 @@ if __name__ == "__main__":
     root.right.right.left = Node(66)
     root.right.right.right = Node(90)
 
-    # Function call
+    print("Preorder traversal")
     print_preorder(root)
     print("-" * 10)
+    print("Postorder traversal")
     print_postorder(root)
     print("-" * 10)
+    print("Inorder traversal")
+    print_inorder(root)
+
+
+
+
+
+    root = Node('Book')
+    root.left = Node('Chapter 1')
+    root.left.left = Node('Section 1.1')
+    root.left.left.left = Node('Paragraph 1.1.1')
+    root.left.left.right = Node('Paragraph 1.1.2')
+    root.left.right = Node('Section 1.2')
+    root.left.right.left = Node('Paragraph 1.2.1')
+    root.left.right.right = Node('Paragraph 1.2.2')
+    root.right = Node('chapter 2')
+    root.right.left = Node('Section 2.1')
+    root.right.left.left = Node('Paragraph 2.1.1')
+    root.right.left.right = Node('Paragraph 2.1.2')
+    root.right.right = Node('Section 2.2')
+    root.right.right.left = Node('Paragraph 2.2.1')
+    root.right.right.right = Node('Paragraph 2.2.2')
+
+    # Function call
+    print("Preorder traversal")
+    print_preorder(root)
+    print("-" * 10)
+    print("Postorder traversal")
+    print_postorder(root)
+    print("-" * 10)
+    print("Inorder traversal")
     print_inorder(root)
